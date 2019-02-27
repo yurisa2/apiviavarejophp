@@ -1,0 +1,3 @@
+[submodule "include/sdk-api-lojista-v2-php"]
+	path = include/sdk-api-lojista-v2-php
+	url = ../../api-developers/sdk-api-lojista-v2-php.git

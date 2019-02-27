@@ -1,0 +1,23 @@
+<?php
+
+require_once 'include/sdk-api-lojista-v2-php/CNovaApiLojistaV2.php';
+require_once 'include/vendor/autoload.php';
+
+$client_id = "XXXXXXXXXXXXXXXX";
+$access_token = "XXXXXXXXXXXXXXXX";
+
+\CNovaApiLojistaV2\client\Configuration::$apiKey['client_id'] = $client_id;
+\CNovaApiLojistaV2\client\Configuration::$apiKey['access_token'] = $access_token;
+
+$api_client = new \CNovaApiLojistaV2\client\ApiClient('https://sandbox.cnova.com/api/v2');
+
+
+
+$rest_client = new RestClient([
+       'base_url' => "https://sandbox.cnova.com/api/v2",
+       'format' => "json",
+       'headers' => [
+         'client_id' => $client_id,
+         'access_token' => $access_token]]);
+
+ ?>
