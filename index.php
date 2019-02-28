@@ -7,8 +7,11 @@ error_reporting(E_ALL);
 require_once "include/config.php";
 
 echo "<pre>";
-
-$sell_items = $rest_client->get("sellerItems");
+$params = [
+  "_offset" => 0,
+  "_limit" => 9999
+];
+$sell_items = $rest_client->get("sellerItems",$params);
 
 var_dump($sell_items);
 
